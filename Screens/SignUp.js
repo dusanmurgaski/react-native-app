@@ -13,6 +13,7 @@ import Icon from 'react-native-vector-icons/Feather';
 import {authentication} from '../Firebase/firebase';
 import {createUserWithEmailAndPassword} from 'firebase/auth';
 import {validateCallback} from '@firebase/util';
+import {Overlay} from 'react-native-elements';
 
 Icon.loadFont();
 const SignUp = ({navigation}) => {
@@ -113,6 +114,9 @@ const SignUp = ({navigation}) => {
           </TouchableOpacity>
         </View>
       </View>
+      <Overlay isVisible={true} onBackdropPress={toogleOverlay}>
+        <Text>HELLO OVERLAY</Text>
+      </Overlay>
     </View>
   );
 };
